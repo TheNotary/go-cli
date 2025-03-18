@@ -1,9 +1,12 @@
 package main
 
 import (
+	"fmt"
+
 	"github.com/<%=config[:author]%>/<%=config[:name]%>/pkg/api"
 )
 
 func main() {
-	  fmt.Println(api.SayHello())
+	myVar := api.SayHello("pew pew")
+	fmt.Println(myVar)
 }

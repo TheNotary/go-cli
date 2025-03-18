@@ -1,17 +1,18 @@
 package api
 
+import "fmt"
 
 type SomeStruct struct {
-	Msg string `json:"msg"`
+	Msg    string `json:"msg"`
 	Random string `json:"random"`
 }
 
-func (h SomeStruct) Hello(otherString string) {
-  return "Hello, todo concatinate..."
+func (h SomeStruct) Hello(otherString string) string {
+	return fmt.Sprintf("Hello, %s %s", h.Msg, otherString)
 }
 
-func SayHello(msg string) {
-  var pointerToSomeStruct = &SomeStruct{}
-  pointerToSomeStruct.Msg = msg
-	fmt.Println(pointerToSomeSmsg)
+func SayHello(msg string) string {
+	var pointerToSomeStruct = &SomeStruct{}
+	pointerToSomeStruct.Msg = msg
+	return pointerToSomeStruct.Hello("other message")
 }
