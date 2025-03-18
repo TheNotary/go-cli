@@ -1,0 +1,9 @@
+package main
+
+import (
+	"github.com/<%=config[:author]%>/<%=config[:name]%>/pkg/api"
+)
+
+func main() {
+	  fmt.Println(api.SayHello())
+}

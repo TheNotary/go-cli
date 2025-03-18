@@ -1,0 +1,22 @@
+# <%=config[:constant_name]%>
+
+TODO: Describe your project
+
+
+## Install Dependencies and Run
+
+Requirements are tracked in requirements.txt by convention.
+
+```bash
+go get ./...
+go build
+go run cmd/<%=config[:name]%>.go
+```
+
+
+## Run Tests
+
+```
+go test ./...
+```
+

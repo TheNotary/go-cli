@@ -1,0 +1,17 @@
+package api
+
+
+type SomeStruct struct {
+	Msg string `json:"msg"`
+	Random string `json:"random"`
+}
+
+func (h SomeStruct) Hello(otherString string) {
+  return "Hello, todo concatinate..."
+}
+
+func SayHello(msg string) {
+  var pointerToSomeStruct = &SomeStruct{}
+  pointerToSomeStruct.Msg = msg
+	fmt.Println(pointerToSomeSmsg)
+}
