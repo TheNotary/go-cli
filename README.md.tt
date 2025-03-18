@@ -11,8 +11,8 @@ Requirements are tracked in requirements.txt by convention.
 go mod init github.com/<%=config[:author]%>/<%=config[:name]%>
 go mod tidy
 go get ./...
-go build cmd/<%=config[:name]%>.go
-go run cmd/<%=config[:name]%>.go
+go build cmd/<%=config[:underscored_name]%>.go
+go run cmd/<%=config[:underscored_name]%>.go
 ```
 
 

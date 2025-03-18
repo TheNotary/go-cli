@@ -7,12 +7,17 @@ type SomeStruct struct {
 	Random string `json:"random"`
 }
 
-func (h SomeStruct) Hello(otherString string) string {
-	return fmt.Sprintf("Hello, %s %s", h.Msg, otherString)
+func (h SomeStruct) Hello(otherString string) (string, error) {
+	return fmt.Sprintf("Hello, %s %s", h.Msg, otherString), nil
 }
 
-func SayHello(msg string) string {
+func SayHello(msg string) (output string, err error) {
+	if msg == "banned" {
+		err = fmt.Errorf("error in SayHello: ")
+		return
+	}
 	var pointerToSomeStruct = &SomeStruct{}
 	pointerToSomeStruct.Msg = msg
-	return pointerToSomeStruct.Hello("other message")
+	output, err = pointerToSomeStruct.Hello("other message")
+	return
 }

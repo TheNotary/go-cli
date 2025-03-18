@@ -7,6 +7,9 @@ import (
 )
 
 func main() {
-	myVar := api.SayHello("pew pew")
+	myVar, err := api.SayHello("pew pew")
+	if err != nil {
+		fmt.Println("Error: " + err.Error())
+	}
 	fmt.Println(myVar)
 }
