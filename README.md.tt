@@ -1,18 +1,18 @@
-# <%=config[:pascal_name]%>
-![Tests](https://github.com/<%=config[:author]%>/<%=config[:name]%>/actions/workflows/build.yml/badge.svg)
+# <%=config[:unprefixed_pascal]%>
+![Tests](<%=config[:git_repo_url]%>/actions/workflows/build.yml/badge.svg)
 
 
 TODO: Describe your project
 
 ## Install From Github
 
-    go install github.com/<%=config[:author]%>/<%=config[:name]%>/cmd/<%=config[:unprefixed_name]%>@latest
+    go install <%=config[:git_repo_path]%>/cmd/<%=config[:unprefixed_name]%>@latest
 
 ## Build/ Run from Source
 
-    go run cmd/<%=config[:name]%>/main.go
-    go build -o <%=config[:name]%> cmd/<%=config[:name]%>/main.go
-    ./<%=config[:name]%>
+    go run cmd/<%=config[:unprefixed_name]%>/main.go
+    go build -o <%=config[:unprefixed_name]%> cmd/<%=config[:unprefixed_name]%>/main.go
+    ./<%=config[:unprefixed_name]%>
 
 ## Run Tests
 
@@ -25,7 +25,7 @@ TODO: Describe your project
 ## Initialize the Project
 The command `go mod tidy` looks through your source code and installs any dependencies missing in `go.mod`.  Most IDEs will run this command upon save along with running formatters and linters.
 
-    go mod init github.com/<%=config[:author].downcase%>/<%=config[:name]%>
+    go mod init <%=config[:git_repo_path]%>
     go mod tidy
 
 ## Install / Update Dependencies
@@ -40,5 +40,4 @@ Go releases are cached by "the go module proxy" which strictly adheres to immuta
 Also, local caches will exist after installing a package, so you may want to clean those up and delete any binaries left behind:
 
     go clean -cache -modcache
-    rm "${GOPATH}/bin/<%= config[:name] %>"
-
+    rm "${GOPATH}/bin/<%= config[:unprefixed_name] %>"
