@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/<%=config[:author]%>/<%=config[:name]%>/pkg/api"
+	"<%=config[:git_repo_path]%>/pkg/api"
 )
 
 func main() {
