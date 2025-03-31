@@ -16,7 +16,7 @@ TODO: Describe your project
 
 ## Run Tests
 
-    go test ...
+    go test ./...
 
 
 # Ecosystem Notes
@@ -30,7 +30,7 @@ The command `go mod tidy` looks through your source code and installs any depend
 
 ## Install / Update Dependencies
 
-    go get ...
+    go get ./...
 
 ## Distribution Troublshooting
 Versioned releases are cut exclusively by their git tag in Go eliminated the need to create "bumps version to x.y.z" commits!
