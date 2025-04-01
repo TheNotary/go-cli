@@ -18,6 +18,12 @@ TODO: Describe your project
 
     go test ./...
 
+Or treat yourself to a go test formatter:
+
+    go install github.com/mfridman/tparse@latest
+    alias gotest="set -o pipefail && go test ./... -json | tparse -all"
+    gotest
+
 
 # Ecosystem Notes
 ## Run and Delete These Commands for Public Projects
