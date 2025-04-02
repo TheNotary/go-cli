@@ -1,6 +1,6 @@
 # <%=config[:unprefixed_pascal]%>
 [![Go Reference](https://pkg.go.dev/badge/<%=config[:git_repo_path]%>.svg)](https://pkg.go.dev/<%=config[:git_repo_path]%>)
-![Tests](<%=config[:git_repo_url]%>/actions/workflows/build.yml/badge.svg)
+[![Tests](<%=config[:git_repo_url]%>/actions/workflows/build.yml/badge.svg)](<%=config[:git_repo_url]%>/actions/workflows/build.yml)
 
 
 TODO: Describe your project
