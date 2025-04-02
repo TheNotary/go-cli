@@ -17,13 +17,17 @@ TODO: Describe your project
 
 ## Run Tests
 
-    go test ./...
-
-Or treat yourself to a go test formatter:
+Go needs a test formatter so...
 
     go install github.com/mfridman/tparse@latest
     alias gotest="set -o pipefail && go test ./... -json | tparse -all"
     gotest
+
+If you lose track of your coverage, cheat with:
+
+    color_scheme="sed -i 's/: black/: white/g' c.html && sed -i 's/: rgb(44, 212, 149)/: rgb(107 182 77)/g' c.html"
+    alias gocover="go test -coverprofile=c.out ./... && go tool cover -html=c.out -o c.html && eval \"${color_scheme}\" && open c.html"
+    gocover
 
 
 # Ecosystem Notes
